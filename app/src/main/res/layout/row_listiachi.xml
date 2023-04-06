@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listiachiRowModel" type="com.hngsapplication.app.modules.frameeighteen.data.model.ListiachiRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowiachi"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtIachi"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:layout_weight="0.41" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{listiachiRowModel.txtIachi}"
+            style="@style/txtIntermedium16" tools:text="@string/lbl_i_a_chi2"/>
+        <LinearLayout android:id="@+id/linearRowhani"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_230pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.59" android:layout_width="0dp" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtHaNi"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.77" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listiachiRowModel.txtHaNi}"
+                style="@style/txtInterregular16_3" tools:text="@string/lbl_ha_n_i"/>
+            <ImageView android:id="@+id/imageClock"
+                android:layout_height="@dimen/_14pxh"
+                android:layout_marginBottom="@dimen/_3pxv"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="@dimen/_14pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_clock_bluegray_900"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_clock_bluegray_900"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

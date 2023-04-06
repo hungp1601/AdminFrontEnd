@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoiMatKhau">
+    <LinearLayout android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_600">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/btnBack"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_9pxv"
+                    android:layout_marginTop="@dimen/_7pxv"
+                    android:layout_width="@dimen/_14pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtImtkhu"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_72pxh"
+                    android:layout_weight="0.92"
+                    android:layout_width="0dp" android:singleLine="true"
+                    style="@style/txtInterregular25" tools:text="@string/lbl_i_m_t_kh_u"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumn"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_600">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnvuilongnhp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_1">
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtVuilongnhp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_32pxh"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_31pxv"
+                    android:layout_width="match_parent"
+                    style="@style/txtInterregular16_3" tools:text="@string/msg_vui_lo_ng_nh_p2"/>
+                <FrameLayout android:id="@+id/frameStacknhpmtkh"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_31pxh"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_23pxv" android:layout_width="@dimen/_335pxh">
+                    <LinearLayout android:id="@+id/linearColumnnhpmtkh"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylewhite_2">
+
+                        <EditText
+                            android:id="@+id/txtNhpmtkh"
+                            style="@style/txtInterregular16_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:hint="Nhập mật khẩu cũ"
+                            android:inputType="textPassword"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtGroupFortySeven"
+                        style="@style/txtSolid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:ellipsize="end"
+                        android:paddingStart="@dimen/_1pxh"
+                        android:paddingTop="@dimen/_3pxv"
+                        android:paddingBottom="@dimen/_1pxv"
+                        android:singleLine="true"
+                        android:visibility="visible"
+                        tools:text="Mật khẩu cũ" />
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameStacknhpmtkhOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_31pxh"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_11pxv" android:layout_width="@dimen/_335pxh">
+                    <LinearLayout
+                        android:id="@+id/linearColumnnhpmtkhOne"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylewhite_2">
+
+                        <EditText
+                            android:id="@+id/txtNhpmtkhOne"
+                            style="@style/txtInterregular16_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:hint="Nhập mật khẩu mới"
+                            android:inputType="text|textPassword"
+                            android:singleLine="true"
+                            android:text="" />
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroupFortyFive"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_1pxv"
+                        android:paddingStart="@dimen/_1pxh"
+                        android:paddingTop="@dimen/_3pxv"
+                        android:singleLine="true"
+                        style="@style/txtSolid" tools:text="@string/lbl_m_t_kh_u_m_i"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameStacknhplaimt"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_31pxh"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_12pxv" android:layout_width="@dimen/_335pxh">
+                    <LinearLayout android:id="@+id/linearColumnnhplaimt"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical" style="@style/groupStylewhite_2">
+
+                        <EditText
+                            android:id="@+id/txtNhplaimt"
+                            style="@style/txtInterregular16_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:hint="Nhập lại mật khẩu mới"
+                            android:inputType="textPassword"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGroupFortyThree"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_1pxv"
+                        android:paddingStart="@dimen/_3pxh"
+                        android:paddingTop="@dimen/_2pxv"
+                        android:singleLine="true"
+                        style="@style/txtSolid" tools:text="@string/msg_xa_c_minh_m_t"/>
+                </FrameLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btniMtKhu"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_62pxv"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_32pxh"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_57pxv"
+                    android:layout_width="@dimen/_230pxh"
+                    android:paddingBottom="@dimen/_18pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_18pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_i_m_t_kh_u"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_i_m_t_kh_u"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

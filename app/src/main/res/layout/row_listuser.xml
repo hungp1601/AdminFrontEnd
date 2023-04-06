@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listuserRowModel" type="com.hngsapplication.app.modules.framefourteen.data.model.ListuserRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowuser"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageUser"
+            android:layout_height="@dimen/_47pxh"
+            android:layout_width="@dimen/_35pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_user"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+        <LinearLayout android:id="@+id/linearRowpd00001113"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2pxv"
+            android:layout_marginStart="@dimen/_29pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_weight="0.89" android:layout_width="0dp" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnpd00001113"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.91" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPD00001113"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listuserRowModel.txtPD00001113}"
+                    style="@style/txtInterregular18" tools:text="@string/lbl_pd00001113"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txt038968204"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listuserRowModel.txt038968204}"
+                    style="@style/txtInterregular14_1" tools:text="@string/lbl_038968204"/>
+            </LinearLayout>
+            <ImageButton android:background="@color/white_A701"
+                android:id="@+id/btnVector"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_6pxv"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="@dimen/_24pxh"
+                android:paddingHorizontal="@dimen/_7pxh"
+                android:paddingVertical="@dimen/_7pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_vector_bluegray_900" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frameTwentythreeVM" type="com.hngsapplication.app.modules.frametwentythree.data.viewmodel.FrameTwentythreeVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameStackquetBinS"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_208pxv"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A701">
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_gravity="start" android:layout_height="0dp"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnquetBinS"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnQuetBinS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_25pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_25pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_que_t_bi_n_s"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRoundedBottomCorner" tools:text="@string/lbl_que_t_bi_n_s"/>
+                <LinearLayout android:id="@+id/linearRowrectanglefifty"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12pxh"
+                    android:layout_marginStart="@dimen/_14pxh"
+                    android:layout_marginTop="@dimen/_43pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageRectangleFifty"
+                        android:layout_height="@dimen/_281pxh"
+                        android:layout_width="@dimen/_172pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_rectangle50}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle50"/>
+                    <ImageView android:id="@+id/imageRectangleFiftyOne"
+                        android:layout_height="@dimen/_281pxh"
+                        android:layout_marginStart="@dimen/_29pxh"
+                        android:layout_width="@dimen/_172pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_rectangle50}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle50"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="end"
+                    android:id="@+id/linearRowcheckIn"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_23pxh"
+                    android:layout_marginStart="@dimen/_23pxh"
+                    android:layout_marginTop="@dimen/_23pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnCheckIn"
+                        android:layout_height="@dimen/_35pxv"
+                        android:layout_width="@dimen/_117pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_6pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_check_in"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded_4" tools:text="@string/lbl_check_in"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_bluegray_100_radius_15"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_check_out"
+                        android:id="@+id/etGroupTwentyTwo"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_100pxh"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_6pxv"
+                        android:singleLine="true"
+                        android:text="@={frameTwentythreeVM.frameTwentythreeModel.etGroupTwentyTwoValue}"
+                        android:textColorHint="@color/bluegray_900"
+                        style="@style/etSolidRounded_1" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:gravity="start"
+                    android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_34pxh"
+                    android:layout_marginStart="@dimen/_34pxh"
+                    android:layout_marginTop="@dimen/_48pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{frameTwentythreeVM.frameTwentythreeModel.txtLanguage}"
+                    style="@style/txtIntersemibold20_1" tools:text="@string/msg_k_t_qua_sau"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearKtqua"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12pxh"
+                    android:layout_marginStart="@dimen/_14pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylewhite_7">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBins30E"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_69pxh"
+                        android:layout_marginStart="@dimen/_69pxh"
+                        android:layout_marginTop="@dimen/_28pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{frameTwentythreeVM.frameTwentythreeModel.txtBins30E}"
+                        style="@style/txtIntersemibold18" tools:text="@string/msg_bi_n_s_30e"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtKtquatrun"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_26pxv"
+                        android:layout_marginEnd="@dimen/_69pxh"
+                        android:layout_marginStart="@dimen/_69pxh"
+                        android:layout_marginTop="@dimen/_13pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{frameTwentythreeVM.frameTwentythreeModel.txtKtquatrun}"
+                        style="@style/txtIntersemibold18_4" tools:text="@string/msg_k_t_qua_tru_n"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</layout>

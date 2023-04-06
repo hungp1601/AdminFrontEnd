@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout android:id="@+id/linearRowreply"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearNaptin"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_23pxv"
+            android:layout_weight="0.38" android:layout_width="0dp" android:orientation="vertical">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                android:id="@+id/btnReply"
+                android:layout_height="@dimen/_70pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="@dimen/_73pxh"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_reply" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNaptin"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_3pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="Lịch sử"
+                style="@style/txtIntermedium17" tools:text="Lịch sử"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearMtaikhoan"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_weight="0.39" android:layout_width="0dp" android:orientation="vertical">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                android:id="@+id/btnVolume"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_70pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="@dimen/_73pxh"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_volume" tools:ignore="ContentDescription"/>
+            <TextView android:id="@+id/txtMtaikhoan"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_14pxh"
+                android:layout_marginStart="@dimen/_14pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content"
+                android:text="Thay đổi TTKH"
+                style="@style/txtIntermedium17" tools:text="Thay đổi TTKH"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCait"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_weight="0.23" android:layout_width="0dp" android:orientation="vertical">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                android:id="@+id/btnGroupTwentyEight"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_70pxh"
+                android:layout_width="@dimen/_72pxh"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_group28" tools:ignore="ContentDescription"/>
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/txtCait"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                android:text="Thống kê doanh thu"
+                android:maxLines="3"
+                style="@style/txtIntermedium17" tools:text="Thống kê doanh thu"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

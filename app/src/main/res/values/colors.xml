@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="black_900_3f">#3f000000</color>
+<color name="gray_50">#fffafa</color>
+<color name="teal_400">#1fb06d</color>
+<color name="green_A700">#00a558</color>
+<color name="black_900">#000000</color>
+<color name="red_A700">#d00d0d</color>
+<color name="gray_600">#818181</color>
+<color name="gray_501">#939393</color>
+<color name="gray_204">#e9e8e8</color>
+<color name="gray_700">#696969</color>
+<color name="gray_202">#f0efef</color>
+<color name="gray_400">#b9b9b9</color>
+<color name="gray_500">#a2a2a2</color>
+<color name="gray_203">#ece9e9</color>
+<color name="gray_401">#bdb9b9</color>
+<color name="gray_800">#505050</color>
+<color name="gray_900">#202020</color>
+<color name="bluegray_100">#d9d9d9</color>
+<color name="black_900_0f">#0f000000</color>
+<color name="gray_200">#eeecec</color>
+<color name="gray_201">#f0f0f0</color>
+<color name="gray_300">#e2e2e2</color>
+<color name="bluegray_900">#333333</color>
+<color name="black_900_54">#54000000</color>
+<color name="bluegray_400">#8b8b8b</color>
+<color name="bluegray_101">#cecece</color>
+<color name="white_A701">#ffffff</color>
+<color name="white_A700">#fffdfd</color>
+<color name="indigo_500">#4166b9</color>
+<color name="white_A702">#fffcfc</color>
+</resources>

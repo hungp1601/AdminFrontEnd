@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="table1RowModel" type="com.hngsapplication.app.modules.frametwentyfive.data.model.Table1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtCell"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table1RowModel.txtCell}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_stt"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellOne"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table1RowModel.txtCellOne}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_ma_giao_di_ch"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellTwo"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table1RowModel.txtCellTwo}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_ma_ta_i_khoa_n"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellThree"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@{table1RowModel.txtCellThree}"
+            style="@style/txtSolidOutline" tools:text="@string/msg_nga_y_th_c_hi"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellFour"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_11pxv" android:singleLine="true"
+            android:text="@{table1RowModel.txtCellFour}"
+            style="@style/txtSolidOutline" tools:text="@string/msg_loa_i_giao_di_c"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellFive"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_9pxv" android:singleLine="true"
+            android:text="@{table1RowModel.txtCellFive}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_s_ti_n"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnStt"
+            android:layout_height="@dimen/_36pxv"
+            android:layout_width="@dimen/_120pxh"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@string/lbl_stt" android:textAllCaps="false"
+            style="@style/btnSolidOutline" tools:text="@string/lbl_stt"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnMaGiaoDich"
+            android:layout_height="@dimen/_36pxv"
+            android:layout_width="@dimen/_120pxh"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_23pxh"
+            android:paddingStart="@dimen/_23pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@string/lbl_ma_giao_di_ch"
+            android:textAllCaps="false" style="@style/btnSolidOutline" tools:text="@string/lbl_ma_giao_di_ch"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCell"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStyleblack_900_0f">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtText"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_11pxv"
+                android:layout_marginEnd="@dimen/_30pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_marginTop="@dimen/_9pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_bi_n_s_xe"
+                style="@style/txtIntersemibold12" tools:text="@string/lbl_bi_n_s_xe"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageCell"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_width="@dimen/_120pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_cell_5"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_cell_5"/>
+        <ImageView android:id="@+id/imageCellOne"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_width="@dimen/_120pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_cell_6"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_cell_6"/>
+        <ImageView android:id="@+id/imageCellTwo"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_width="@dimen/_120pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_cell_7"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_cell_7"/>
+    </LinearLayout>
+</layout>

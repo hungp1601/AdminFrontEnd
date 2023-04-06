@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnclock"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A701">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStylegray_1">
+            <LinearLayout android:id="@+id/linearRowclock"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_26pxv"
+                android:layout_marginEnd="@dimen/_154pxh"
+                android:layout_marginStart="@dimen/_30pxh"
+                android:layout_marginTop="@dimen/_31pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/btnLogout"
+                    android:layout_height="@dimen/_22pxh"
+                    android:layout_marginBottom="@dimen/_18pxv"
+                    android:layout_marginTop="@dimen/_3pxv"
+                    android:layout_width="@dimen/_22pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_clock"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_clock"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNSCT"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_100pxh"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="nSCT"
+                    style="@style/txtInterextralight36" tools:text="nSCT"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnreply"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_40pxh"
+            android:layout_marginTop="@dimen/_90pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A701">
+
+            <LinearLayout android:id="@+id/rowOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_23pxv"
+                    android:layout_weight="0.38" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                        android:id="@+id/btnNapTien"
+                        android:layout_height="@dimen/_70pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="@dimen/_73pxh"
+                        android:paddingHorizontal="@dimen/_15pxh"
+                        android:paddingVertical="@dimen/_15pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_reply" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNapTien"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginStart="@dimen/_3pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="Nạp tiền"
+                        style="@style/txtIntermedium17" tools:text="@string/lbl_na_p_ti_n"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearMtaikhoan"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.39" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                        android:id="@+id/btnMoTK"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_70pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="@dimen/_73pxh"
+                        android:paddingHorizontal="@dimen/_15pxh"
+                        android:paddingVertical="@dimen/_15pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_volume" tools:ignore="ContentDescription"/>
+                    <TextView android:id="@+id/txtMotaikhoan"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_14pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="wrap_content"
+                        android:text="Mở tài khoản"
+                        style="@style/txtIntermedium17" tools:text="@string/lbl_m_ta_i_khoa_n"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearCaiDat"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.23" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                        android:id="@+id/btnCaiDat"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_70pxh"
+                        android:layout_width="@dimen/_72pxh"
+                        android:paddingHorizontal="@dimen/_15pxh"
+                        android:paddingVertical="@dimen/_15pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_group28" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtCaiDat"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_7pxh"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="Cài đặt"
+                        style="@style/txtIntermedium17" tools:text="@string/lbl_ca_i_t"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearNaptin"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_23pxv"
+                    android:layout_weight="0.38" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                        android:id="@+id/btnLichSu"
+                        android:layout_height="@dimen/_70pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="@dimen/_73pxh"
+                        android:paddingHorizontal="@dimen/_15pxh"
+                        android:paddingVertical="@dimen/_15pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_reply" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLichSu"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_marginStart="@dimen/_3pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="Lịch sử"
+                        style="@style/txtIntermedium17" tools:text="Lịch sử"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearTDTTKH"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.39" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                        android:id="@+id/btnTDTTKH"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_70pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="@dimen/_73pxh"
+                        android:paddingHorizontal="@dimen/_15pxh"
+                        android:paddingVertical="@dimen/_15pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_volume" tools:ignore="ContentDescription"/>
+                    <TextView android:id="@+id/txtTDTTKH"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_14pxh"
+                        android:layout_marginTop="@dimen/_10pxv"
+                        android:layout_width="wrap_content"
+                        android:text="Thay đổi TTKH"
+                        style="@style/txtIntermedium17" tools:text="Thay đổi TTKH"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearCait"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_weight="0.23" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_100_radius_25"
+                        android:id="@+id/btnTKDT"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_70pxh"
+                        android:layout_width="@dimen/_72pxh"
+                        android:paddingHorizontal="@dimen/_15pxh"
+                        android:paddingVertical="@dimen/_15pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_group28" tools:ignore="ContentDescription"/>
+                    <TextView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtTKDT"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_7pxh"
+                        android:layout_marginStart="@dimen/_7pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_width="match_parent"
+                        android:text="Thống kê doanh thu"
+                        android:maxLines="3"
+                        style="@style/txtIntermedium17" tools:text="Thống kê doanh thu"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

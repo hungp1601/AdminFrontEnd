@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listthngbaoOneRowModel" type="com.hngsapplication.app.modules.frameeleven.data.model.ListthngbaoOneRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnthngbao"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtThngbaoOne"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_43pxh"
+            android:layout_marginStart="@dimen/_43pxh"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listthngbaoOneRowModel.txtThngbaoOne}"
+            style="@style/txtInterbold16" tools:text="@string/lbl_th_ng_ba_o"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowloa"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_203_radius_17"
+                android:id="@+id/btnLoa"
+                android:layout_height="@dimen/_34pxh"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="@dimen/_34pxh"
+                android:paddingHorizontal="@dimen/_5pxh"
+                android:paddingVertical="@dimen/_5pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_loa" tools:ignore="ContentDescription"/>
+            <TextView android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_9pxh"
+                android:layout_weight="0.91" android:layout_width="0dp"
+                android:text="@{listthngbaoOneRowModel.txtPrice}"
+                style="@style/txtIntermedium14" tools:text="@string/msg_tk_nsct_30_000"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txt191708180"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_43pxh"
+            android:layout_marginStart="@dimen/_43pxh"
+            android:layout_marginTop="@dimen/_5pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{listthngbaoOneRowModel.txt191708180}"
+            style="@style/txtInterregular15" tools:text="@string/msg_19_17_08_18_0"/>
+    </LinearLayout>
+</layout>

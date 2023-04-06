@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CaiDat">
+    <LinearLayout android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_600">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_35pxh"
+            android:layout_marginStart="@dimen/_35pxh"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/btnBack"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_11pxv"
+                    android:layout_marginTop="@dimen/_5pxv"
+                    android:layout_width="@dimen/_14pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCait"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_109pxh"
+                    android:layout_weight="0.86"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="Cài đặt"
+                    style="@style/txtInterregular25" tools:text="@string/lbl_ca_i_t"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnlock"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_600">
+            <LinearLayout android:id="@+id/btnDoiMK"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_1">
+                <LinearLayout android:id="@+id/linearRowlock"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_38pxh"
+                    android:layout_marginTop="@dimen/_37pxv"
+                    android:layout_weight="0.97"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLock"
+                        android:layout_height="@dimen/_25pxh"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_width="@dimen/_22pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_lock"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_lock"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtImtkhu"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_3pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="Đổi mật khẩu"
+                        style="@style/txtInterregular20_2" tools:text="@string/lbl_i_m_t_kh_u"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageVector"
+                    android:layout_height="@dimen/_10pxh"
+                    android:layout_marginBottom="@dimen/_757pxv"
+                    android:layout_marginEnd="@dimen/_38pxh"
+                    android:layout_marginStart="@dimen/_153pxh"
+                    android:layout_marginTop="@dimen/_46pxv"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_bluegray_908"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_bluegray_908"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

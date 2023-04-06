@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frameTwentytwoVM" type="com.hngsapplication.app.modules.frametwentytwo.data.viewmodel.FrameTwentytwoVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumn"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_286pxv"
+        android:layout_marginEnd="@dimen/_40pxh"
+        android:layout_marginStart="@dimen/_34pxh"
+        android:layout_marginTop="@dimen/_34pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_600">
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:gravity="start"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearColumnarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="@dimen/_14pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtNgkytaik"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginTop="@dimen/_63pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{frameTwentytwoVM.frameTwentytwoModel.txtNgkytaik}"
+                    style="@style/txtInterbold22" tools:text="@string/msg_ng_ky_ta_i_k"/>
+                <TextView android:ellipsize="end" android:gravity="end"
+                    android:id="@+id/txtMataikhoan"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginStart="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_81pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{frameTwentytwoVM.frameTwentytwoModel.txtMataikhoan}"
+                    style="@style/txtIntermedium20" tools:text="@string/msg_ma_ta_i_khoa_n"/>
+                <TextView android:ellipsize="end" android:gravity="end"
+                    android:id="@+id/txtMtkhu123"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_56pxh"
+                    android:layout_marginStart="@dimen/_56pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{frameTwentytwoVM.frameTwentytwoModel.txtMtkhu123}"
+                    style="@style/txtIntermedium20" tools:text="@string/msg_m_t_kh_u_123"/>
+                <FrameLayout android:id="@+id/frameQRCode"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_247pxv"
+                    android:layout_marginEnd="@dimen/_28pxh"
+                    android:layout_marginStart="@dimen/_28pxh"
+                    android:layout_marginTop="@dimen/_48pxv"
+                    android:layout_width="@dimen/_247pxh" style="@style/groupStylewhite_A701">
+                    <ImageView android:id="@+id/imageVector"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_215pxh"
+                        android:layout_marginHorizontal="@dimen/_16pxh"
+                        android:layout_marginVertical="@dimen/_16pxv"
+                        android:layout_width="@dimen/_215pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_vector_black_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_black_900"/>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

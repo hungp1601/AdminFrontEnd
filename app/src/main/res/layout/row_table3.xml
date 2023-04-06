@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="table3RowModel" type="com.hngsapplication.app.modules.frametwentysix.data.model.Table3RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtCell"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table3RowModel.txtCell}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_stt"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellOne"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table3RowModel.txtCellOne}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_ma_giao_di_ch"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellTwo"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table3RowModel.txtCellTwo}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_bi_n_s_xe"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellThree"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table3RowModel.txtCellThree}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_nga_y_g_i"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellFour"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table3RowModel.txtCellFour}"
+            style="@style/txtSolidOutline" tools:text="@string/lbl_nga_y_l_y"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCellFive"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.17" android:layout_width="0dp"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+            android:text="@{table3RowModel.txtCellFive}"
+            style="@style/txtSolidOutline" tools:text="@string/msg_s_ti_n_g_i"/>
+    </LinearLayout>
+</layout>

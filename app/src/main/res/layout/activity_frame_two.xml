@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frameTwoVM" type="com.hngsapplication.app.modules.frametwo.data.viewmodel.FrameTwoVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumn"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_65pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_600">
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true" android:gravity="start"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearColumnnsct"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNSCT"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_153pxh"
+                    android:layout_marginStart="@dimen/_154pxh"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{frameTwoVM.frameTwoModel.txtNSCT}"
+                    style="@style/txtInterextralight36" tools:text="@string/lbl_nsct"/>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumnqunmtkhu"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical" style="@style/groupStylegray_50cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtQunmtkhu"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_18pxh"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_58pxv"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{frameTwoVM.frameTwoModel.txtQunmtkhu}"
+                        style="@style/txtIntersemibold25" tools:text="@string/lbl_qu_n_m_t_kh_u"/>
+                    <TextView android:gravity="center_horizontal"
+                        android:id="@+id/txtQuykhachvui"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_18pxh"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_35pxv"
+                        android:layout_width="match_parent"
+                        android:text="@{frameTwoVM.frameTwoModel.txtQuykhachvui}"
+                        style="@style/txtInterregular16_3" tools:text="@string/msg_quy_kha_ch_vui"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_white_a701_border_bluegray_400_radius_15"
+                        android:ellipsize="end"
+                        android:hint="@string/msg_s_i_n_thoa"
+                        android:id="@+id/etSt" android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_17pxh"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_30pxv"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_18pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_18pxv"
+                        android:singleLine="true"
+                        android:text="@={frameTwoVM.frameTwoModel.etStValue}"
+                        android:textColorHint="@color/gray_700"
+                        style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    <LinearLayout android:id="@+id/linearRowhuy"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_407pxv"
+                        android:layout_marginEnd="@dimen/_18pxh"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_29pxv"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:id="@+id/btnHuy"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:paddingBottom="@dimen/_18pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingStart="@dimen/_30pxh"
+                            android:paddingTop="@dimen/_18pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_hu_y"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRoundedOutline_2" tools:text="@string/lbl_hu_y"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:id="@+id/btnTipTuc"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_27pxh"
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:paddingBottom="@dimen/_18pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingStart="@dimen/_30pxh"
+                            android:paddingTop="@dimen/_18pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_ti_p_tu_c"
+                            android:textAllCaps="false"
+                            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_ti_p_tu_c"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

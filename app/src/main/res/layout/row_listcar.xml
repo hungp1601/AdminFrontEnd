@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listcarRowModel" type="com.hngsapplication.app.modules.frameeighteen.data.model.ListcarRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowhoatng"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowcar"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.61" android:layout_width="0dp" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCar"
+                android:layout_height="@dimen/_31pxh"
+                android:layout_width="@dimen/_55pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_car"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_car"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txt30E33067T"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_9pxv"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_6pxv"
+                android:layout_weight="0.6" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listcarRowModel.txt30E33067T}"
+                style="@style/txtInterregular13_3" tools:text="@string/lbl_30e_330_67t"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearHoatng"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_1pxv"
+            android:layout_weight="0.39" android:layout_width="0dp"
+            android:orientation="horizontal" style="@style/groupStylebluegray_1">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHoatng"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_6pxv"
+                android:layout_weight="0.89" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{listcarRowModel.txtHoatng}"
+                style="@style/txtInterregular13_3" tools:text="@string/lbl_hoa_t_ng"/>
+            <ImageView android:id="@+id/imageVectorOne"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_marginBottom="@dimen/_12pxv"
+                android:layout_marginEnd="@dimen/_11pxh"
+                android:layout_marginStart="@dimen/_3pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="@dimen/_8pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_vector_bluegray_900_3x8}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector_bluegray_900_3x8"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
