@@ -31,7 +31,6 @@ public class Home extends AppCompatActivity {
         btnCaiDat = findViewById(R.id.btnCaiDat);
         btnLichSu = findViewById(R.id.btnLichSu);
         btnTDTTKH = findViewById(R.id.btnTDTTKH);
-        btnTKDT = findViewById(R.id.btnTKDT);
 
         btnNapTien.setOnClickListener(v -> {
             Intent intent;
@@ -52,19 +51,21 @@ public class Home extends AppCompatActivity {
         });
 
         btnLichSu.setOnClickListener(v -> {
-            // Handle click on LichSu button
-            // ...
+            Intent intent;
+            intent = new Intent(v.getContext(), LichSu.class);
+            startActivity(intent);
         });
 
         btnTDTTKH.setOnClickListener(v -> {
-            // Handle click on TDTTKH button
-            // ...
+            Intent intent;
+            intent = new Intent(v.getContext(), ThayDoiThongTin.class);
+            startActivity(intent);
         });
 
-        btnTKDT.setOnClickListener(v -> {
-            // Handle click on TKDT button
-            // ...
-        });
+//        btnTKDT.setOnClickListener(v -> {
+//            // Handle click on TKDT button
+//            // ...
+//        });
 
 
         btnLogout.setOnClickListener(v -> {

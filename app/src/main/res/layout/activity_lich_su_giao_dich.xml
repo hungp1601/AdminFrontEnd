@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable name="frameTwentyVM" type="com.hngsapplication.app.modules.frametwenty.data.viewmodel.FrameTwentyVM"/>
-    </data>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LichSuGiaoDich">
     <LinearLayout android:id="@+id/linearColumnarrowleft"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/_25pxv"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylegray_600">
         <androidx.appcompat.widget.Toolbar android:gravity="start"
@@ -33,7 +33,6 @@
                     android:layout_marginStart="@dimen/_53pxh"
                     android:layout_weight="0.93"
                     android:layout_width="0dp" android:singleLine="true"
-                    android:text="@{frameTwentyVM.frameTwentyModel.txtLichsgiao}"
                     style="@style/txtInterregular25" tools:text="@string/msg_li_ch_s_giao"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
@@ -78,7 +77,6 @@
                             android:layout_marginTop="@dimen/_5pxv"
                             android:layout_width="wrap_content"
                             android:singleLine="true"
-                            android:text="@{frameTwentyVM.frameTwentyModel.txtTracu}"
                             style="@style/txtIntermedium16_1" tools:text="@string/lbl_tra_c_u"/>
                     </FrameLayout>
                     <LinearLayout
@@ -103,7 +101,6 @@
                                 android:layout_weight="0.38"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                android:text="@{frameTwentyVM.frameTwentyModel.txtMataikhoan}"
                                 style="@style/txtIntermedium18" tools:text="@string/lbl_ma_tai_khoan2"/>
                             <TextView android:ellipsize="end"
                                 android:id="@+id/txtGroupEight"
@@ -115,7 +112,6 @@
                                 android:paddingStart="@dimen/_30pxh"
                                 android:paddingTop="@dimen/_2pxv"
                                 android:singleLine="true"
-                                android:text="@{frameTwentyVM.frameTwentyModel.txtGroupEight}"
                                 style="@style/txtSolidRounded_1" tools:text="@string/lbl_pd00001113"/>
                         </LinearLayout>
                         <LinearLayout android:id="@+id/linearRowtngay"
@@ -131,7 +127,6 @@
                                 android:layout_weight="0.28"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                android:text="@{frameTwentyVM.frameTwentyModel.txtTngay}"
                                 style="@style/txtIntermedium18" tools:text="@string/lbl_t_nga_y"/>
                             <View
                                 android:background="@drawable/rectangle_bg_white_a701_radius_5"
@@ -154,7 +149,6 @@
                                 android:layout_weight="0.32"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                android:text="@{frameTwentyVM.frameTwentyModel.txtNngay}"
                                 style="@style/txtIntermedium18" tools:text="@string/lbl_n_nga_y"/>
                             <View
                                 android:background="@drawable/rectangle_bg_white_a701_radius_5"
@@ -191,9 +185,9 @@
                     android:layout_width="wrap_content"
                     android:paddingBottom="@dimen/_2pxv"
                     android:paddingStart="@dimen/_27pxh"
+                    android:paddingEnd="@dimen/_27pxh"
                     android:paddingTop="@dimen/_10pxv"
                     android:singleLine="true"
-                    android:text="@{frameTwentyVM.frameTwentyModel.txtGroupNine}"
                     style="@style/txtSolidRoundedTopCorner" tools:text="@string/msg_k_t_qua_tra_c"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:gravity="end"
@@ -209,4 +203,4 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>

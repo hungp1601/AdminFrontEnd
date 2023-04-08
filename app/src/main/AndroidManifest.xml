@@ -12,6 +12,18 @@
         android:theme="@style/Theme.AdminApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ThayDoiThongTin"
+            android:exported="false" />
+        <activity
+            android:name=".LichSuXe"
+            android:exported="false" />
+        <activity
+            android:name=".LichSu"
+            android:exported="false" />
+        <activity
+            android:name=".LichSuGiaoDich"
+            android:exported="false" />
+        <activity
             android:name=".DoiMatKhau"
             android:exported="false" />
         <activity

@@ -116,9 +116,8 @@
                             android:ellipsize="end"
                             android:gravity="start"
                             android:hint="Nhập mật khẩu mới"
-                            android:inputType="text|textPassword"
-                            android:singleLine="true"
-                            android:text="" />
+                            android:inputType="textPassword"
+                            android:singleLine="true" />
                     </LinearLayout>
                     <TextView android:ellipsize="end"
                         android:id="@+id/txtGroupFortyFive"
