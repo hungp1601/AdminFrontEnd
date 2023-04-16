@@ -33,7 +33,7 @@
                     android:layout_marginStart="@dimen/_62pxh"
                     android:layout_weight="0.94"
                     android:layout_width="0dp" android:singleLine="true"
-                    style="@style/txtInterregular25" tools:text="@string/msg_li_ch_s_xe_va2"/>
+                    style="@style/txtInterregular25" android:text="@string/msg_li_ch_s_xe_va2"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
         <LinearLayout android:gravity="center_horizontal"
@@ -77,7 +77,7 @@
                             android:layout_marginTop="@dimen/_5pxv"
                             android:layout_width="wrap_content"
                             android:singleLine="true"
-                            style="@style/txtIntermedium16_1" tools:text="@string/lbl_tra_c_u"/>
+                            style="@style/txtIntermedium16_1" android:text="@string/lbl_tra_c_u"/>
                     </FrameLayout>
                     <LinearLayout android:id="@+id/linearColumnbinsxe"
                         android:layout_gravity="bottom|start"
@@ -99,7 +99,7 @@
                                 android:layout_weight="0.3"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                style="@style/txtIntermedium18" tools:text="@string/lbl_bi_n_s_xe"/>
+                                style="@style/txtIntermedium18" android:text="@string/lbl_bi_n_s_xe"/>
                             <TextView android:ellipsize="end"
                                 android:id="@+id/txtGroupFifteen"
                                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                                 android:paddingStart="@dimen/_27pxh"
                                 android:paddingTop="@dimen/_3pxv"
                                 android:singleLine="true"
-                                style="@style/txtSolidRounded_1" tools:text="@string/lbl_30e_330_60t"/>
+                                style="@style/txtSolidRounded_1" android:text="@string/lbl_30e_330_60t"/>
                         </LinearLayout>
                         <LinearLayout android:id="@+id/linearRowtngay"
                             android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                                 android:layout_weight="0.25"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                style="@style/txtIntermedium18" tools:text="@string/lbl_t_nga_y"/>
+                                style="@style/txtIntermedium18" android:text="@string/lbl_t_nga_y"/>
                             <View
                                 android:background="@drawable/rectangle_bg_white_a701_radius_5"
                                 android:id="@+id/viewRectangleFortyFive"
@@ -148,7 +148,7 @@
                                 android:layout_weight="0.29"
                                 android:layout_width="0dp"
                                 android:singleLine="true"
-                                style="@style/txtIntermedium18" tools:text="@string/lbl_n_nga_y"/>
+                                style="@style/txtIntermedium18" android:text="@string/lbl_n_nga_y"/>
                             <View
                                 android:background="@drawable/rectangle_bg_white_a701_radius_5"
                                 android:id="@+id/viewRectangleFortySix"
@@ -174,7 +174,7 @@
                     android:singleLine="true"
                     android:text="@string/lbl_ti_m_ki_m"
                     android:textAllCaps="false"
-                    style="@style/btnSolidRounded_2" tools:text="@string/lbl_ti_m_ki_m"/>
+                    style="@style/btnSolidRounded_2" />
                 <androidx.appcompat.widget.AppCompatButton
                     android:ellipsize="end" android:gravity="center"
                     android:id="@+id/btnKtQuaTraCu"

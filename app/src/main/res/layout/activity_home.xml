@@ -188,6 +188,9 @@
                 android:id="@+id/linearTwo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_60pxh"
+                android:layout_marginStart="@dimen/_20pxh"
+
                 android:orientation="horizontal">
 
                 <LinearLayout

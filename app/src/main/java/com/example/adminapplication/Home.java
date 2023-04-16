@@ -62,11 +62,6 @@ public class Home extends AppCompatActivity {
             startActivity(intent);
         });
 
-//        btnTKDT.setOnClickListener(v -> {
-//            // Handle click on TKDT button
-//            // ...
-//        });
-
 
         btnLogout.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

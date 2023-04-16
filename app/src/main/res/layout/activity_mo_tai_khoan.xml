@@ -89,8 +89,10 @@
                                 style="@style/txtInterregular16_4" tools:text="@string/lbl_ho_va_t_n"/>
                             <EditText
                                 android:background="@drawable/rectangle_bg_gray_201_radius_13"
-                                android:id="@+id/viewRectangleFortyTwo"
+                                android:id="@+id/txtTen"
                                 android:layout_height="@dimen/_29pxv"
+                                android:textColor="#000000"
+
                                 android:layout_marginStart="@dimen/_37pxh" android:layout_width="@dimen/_231pxh"/>
                         </LinearLayout>
                         <LinearLayout android:id="@+id/linearRowcccd"
@@ -99,7 +101,7 @@
                             android:layout_marginTop="@dimen/_12pxv"
                             android:layout_width="wrap_content" android:orientation="horizontal">
                             <TextView android:ellipsize="end"
-                                android:id="@+id/txtCCCD"
+                                android:id="@+id/cccd"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/_5pxv"
                                 android:layout_marginTop="@dimen/_4pxv"
@@ -110,8 +112,9 @@
                                 style="@style/txtInterregular16_4" tools:text="@string/lbl_cccd"/>
                             <EditText
                                 android:background="@drawable/rectangle_bg_gray_201_radius_13"
-                                android:id="@+id/viewRectangleFortyThree"
+                                android:id="@+id/txtCCCD"
                                 android:layout_height="@dimen/_29pxv"
+                                android:textColor="#000000"
                                 android:layout_marginStart="@dimen/_63pxh" android:layout_width="@dimen/_231pxh"/>
                         </LinearLayout>
                         <LinearLayout
@@ -130,11 +133,14 @@
                                 android:singleLine="true"
                                 android:text="Ngày sinh:"
                                 style="@style/txtInterregular16_4" tools:text="@string/lbl_nga_y_sinh"/>
+
                             <EditText
-                                android:background="@drawable/rectangle_bg_gray_201_radius_13"
-                                android:id="@+id/viewRectangleFortyTwoOne"
+                                android:id="@+id/txtNgaySinh"
+                                android:layout_width="@dimen/_231pxh"
                                 android:layout_height="@dimen/_29pxv"
-                                android:layout_marginStart="@dimen/_35pxh" android:layout_width="@dimen/_231pxh"/>
+                                android:layout_marginStart="@dimen/_35pxh"
+                                android:background="@drawable/rectangle_bg_gray_201_radius_13"
+                                android:textColor="#000000" />
                         </LinearLayout>
                         <LinearLayout
                             android:id="@+id/linearRowlanguageOne"
@@ -152,11 +158,15 @@
                                 android:singleLine="true"
                                 android:text="Số điện thoại:"
                                 style="@style/txtInterregular16_4" tools:text="@string/msg_s_i_n_thoa2"/>
+
                             <EditText
-                                android:background="@drawable/rectangle_bg_gray_201_radius_13"
-                                android:id="@+id/viewRectangleFortyTwoTwo"
+                                android:id="@+id/txtSDT"
+                                android:layout_width="@dimen/_231pxh"
                                 android:layout_height="@dimen/_29pxv"
-                                android:layout_marginStart="@dimen/_10pxh" android:layout_width="@dimen/_231pxh"/>
+                                android:layout_marginStart="@dimen/_10pxh"
+                                android:background="@drawable/rectangle_bg_gray_201_radius_13"
+                                android:textColor="#000000"
+                                android:inputType="number" />
                         </LinearLayout>
                         <TextView android:ellipsize="end"
                             android:id="@+id/txtLanguageTwo"
@@ -178,26 +188,28 @@
                             android:text="Email:"
                             style="@style/txtInterregular16_4" tools:text="@string/lbl_email"/>
                     </LinearLayout>
-                    <View
+                    <EditText
                         android:background="@drawable/rectangle_bg_gray_201_radius_13"
-                        android:id="@+id/viewRectangleFortyTwoThree"
+                        android:id="@+id/txtDiaChi"
                         android:layout_gravity="bottom|end"
                         android:layout_height="@dimen/_29pxv"
                         android:layout_marginBottom="@dimen/_42pxv"
                         android:layout_marginStart="@dimen/_10pxh"
+                        android:textColor="#000000"
                         android:layout_marginTop="@dimen/_42pxv" android:layout_width="@dimen/_231pxh"/>
                     <EditText
                         android:background="@drawable/rectangle_bg_gray_201_radius_13"
-                        android:id="@+id/viewRectangleFortyThreeOne"
+                        android:id="@+id/txtEmail"
                         android:layout_gravity="bottom|end"
                         android:layout_height="@dimen/_29pxv"
                         android:layout_marginEnd="@dimen/_1pxh"
                         android:layout_marginStart="@dimen/_10pxh"
+                        android:textColor="#000000"
                         android:layout_marginTop="@dimen/_10pxv" android:layout_width="@dimen/_231pxh"/>
                 </FrameLayout>
                 <androidx.appcompat.widget.AppCompatButton
                     android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btnngKy"
+                    android:id="@+id/btnCreate"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="@dimen/_50pxv"
                     android:layout_marginBottom="@dimen/_20pxv"

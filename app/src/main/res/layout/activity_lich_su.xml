@@ -59,6 +59,7 @@
                         android:layout_weight="0.91"
                         android:layout_width="0dp"
                         android:singleLine="true"
+                        android:text="@string/msg_li_ch_s_xe_va"
                         style="@style/txtInterregular18" tools:text="@string/msg_li_ch_s_xe_va"/>
                     <ImageButton android:background="@color/white_A701"
                         android:id="@+id/btnVector"
@@ -91,6 +92,7 @@
                         android:layout_weight="0.86"
                         android:layout_width="0dp"
                         android:singleLine="true"
+                        android:text="@string/msg_li_ch_s_giao"
                         style="@style/txtInterregular18" tools:text="@string/msg_li_ch_s_giao"/>
                     <ImageButton android:background="@color/white_A701"
                         android:id="@+id/btnVectorOne"

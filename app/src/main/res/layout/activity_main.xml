@@ -57,13 +57,12 @@
                         android:background="@drawable/rectangle_bg_white_a701_border_bluegray_400_radius_15"
                         android:ellipsize="end"
                         android:hint="@string/lbl_t_n_ng_nh_p"
-                        android:inputType="text|textPassword"
+                        android:inputType="text"
                         android:paddingStart="@dimen/_20pxh"
                         android:paddingTop="@dimen/_19pxv"
                         android:paddingEnd="@dimen/_30pxh"
                         android:paddingBottom="@dimen/_17pxv"
                         android:singleLine="true"
-                        android:text=""
                         android:textColorHint="@color/gray_700"
                         tools:ignore="Autofill" />
 
@@ -83,8 +82,7 @@
                         android:paddingStart="@dimen/_20pxh"
                         android:paddingTop="@dimen/_19pxv"
                         android:singleLine="true"
-                        android:inputType="text"
-                        android:text=""
+                        android:inputType="textPassword"
                         android:textColorHint="@color/gray_700"
                         style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
 
