@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
 
     <LinearLayout android:id="@+id/linearRowuser"
         android:layout_height="wrap_content"
@@ -20,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.91" android:layout_width="0dp" android:orientation="vertical">
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txtSDY"
+                    android:id="@+id/txtTen"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_width="wrap_content"
@@ -28,7 +32,7 @@
                     android:text="txtPD00001113"
                     style="@style/txtInterregular18" tools:text="@string/lbl_pd00001113"/>
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txSDT"
+                    android:id="@+id/txtSDT"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_marginStart="@dimen/_1pxh"
@@ -50,4 +54,4 @@
                 android:src="@drawable/img_vector_bluegray_900" tools:ignore="ContentDescription"/>
         </LinearLayout>
     </LinearLayout>
-</layout>
+</LinearLayout>

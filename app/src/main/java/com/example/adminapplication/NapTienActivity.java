@@ -18,7 +18,7 @@ import com.google.gson.internal.LinkedTreeMap;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NapTienActivity extends AppCompatActivity  implements UserAdapter.OnItemClickListener, ResponseView {
+public class NapTienActivity extends AppCompatActivity  implements ResponseView {
     ImageView btnBack;
     UserPresenter userPresenter;
     UserAdapter adapter;
@@ -55,10 +55,6 @@ public class NapTienActivity extends AppCompatActivity  implements UserAdapter.O
         }
     }
 
-    @Override
-    public void onItemClick(int position) {
-
-    }
 
     @Override
     public void onComplete(BaseResponse account) {
@@ -89,7 +85,7 @@ public class NapTienActivity extends AppCompatActivity  implements UserAdapter.O
                 }
                 recyclerListUser.setLayoutManager(new LinearLayoutManager(this));
 
-                adapter = new UserAdapter(listUser, this);
+                adapter = new UserAdapter(this, listUser);
                 recyclerListUser.setAdapter(adapter);
             }
         }
