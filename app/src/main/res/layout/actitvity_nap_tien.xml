@@ -67,7 +67,7 @@
                     style="@style/etSolidRoundedOutline_1" tools:ignore="Autofill"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:gravity="center_horizontal"
-                    android:id="@+id/recyclerListuser"
+                    android:id="@+id/recyclerListUser"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_marginStart="@dimen/_10pxh"
@@ -75,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    itemSpace="@{@dimen/_36pxh}" tools:itemCount="1" tools:listitem="@layout/row_listuser"/>
+                    itemSpace="@{@dimen/_36pxh}" tools:itemCount="20" tools:listitem="@layout/row_listuser"/>
                 <View android:background="@color/gray_700"
                     android:id="@+id/lineLineTwo"
                     android:layout_gravity="center_horizontal"

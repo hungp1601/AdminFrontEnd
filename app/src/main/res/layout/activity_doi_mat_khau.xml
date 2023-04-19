@@ -33,7 +33,7 @@
                     android:layout_marginStart="@dimen/_72pxh"
                     android:layout_weight="0.92"
                     android:layout_width="0dp" android:singleLine="true"
-                    style="@style/txtInterregular25" tools:text="@string/lbl_i_m_t_kh_u"/>
+                    style="@style/txtInterregular25" android:text="@string/lbl_i_m_t_kh_u"/>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
         <LinearLayout android:gravity="center_horizontal"
@@ -47,14 +47,18 @@
                 android:layout_height="match_parent"
                 android:layout_width="match_parent"
                 android:orientation="vertical" style="@style/groupStylewhite_1">
-                <TextView android:gravity="center_horizontal"
+
+                <TextView
                     android:id="@+id/txtVuilongnhp"
+                    style="@style/txtInterregular16_3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_32pxh"
                     android:layout_marginStart="@dimen/_32pxh"
                     android:layout_marginTop="@dimen/_31pxv"
-                    android:layout_width="match_parent"
-                    style="@style/txtInterregular16_3" tools:text="@string/msg_vui_lo_ng_nh_p2"/>
+                    android:layout_marginEnd="@dimen/_32pxh"
+                    android:gravity="center_horizontal"
+                    android:text="@string/msg_vui_lo_ng_nh_p2" />
+
                 <FrameLayout android:id="@+id/frameStacknhpmtkh"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
@@ -69,13 +73,15 @@
                         android:orientation="vertical" style="@style/groupStylewhite_2">
 
                         <EditText
-                            android:id="@+id/txtNhpmtkh"
+                            android:id="@+id/txtMKCU"
                             style="@style/txtInterregular16_2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:ellipsize="end"
                             android:gravity="start"
                             android:hint="Nhập mật khẩu cũ"
+                            android:textColorHint="@color/gray_700"
+
                             android:inputType="textPassword"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -92,7 +98,7 @@
                         android:paddingBottom="@dimen/_1pxv"
                         android:singleLine="true"
                         android:visibility="visible"
-                        tools:text="Mật khẩu cũ" />
+                        android:text="Mật khẩu cũ" />
                 </FrameLayout>
                 <FrameLayout android:id="@+id/frameStacknhpmtkhOne"
                     android:layout_gravity="center_horizontal"
@@ -109,13 +115,15 @@
                         android:orientation="vertical" style="@style/groupStylewhite_2">
 
                         <EditText
-                            android:id="@+id/txtNhpmtkhOne"
+                            android:id="@+id/txtMKMoi"
                             style="@style/txtInterregular16_2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:ellipsize="end"
                             android:gravity="start"
                             android:hint="Nhập mật khẩu mới"
+                            android:textColorHint="@color/gray_700"
+
                             android:inputType="textPassword"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -128,7 +136,7 @@
                         android:paddingStart="@dimen/_1pxh"
                         android:paddingTop="@dimen/_3pxv"
                         android:singleLine="true"
-                        style="@style/txtSolid" tools:text="@string/lbl_m_t_kh_u_m_i"/>
+                        style="@style/txtSolid" android:text="@string/lbl_m_t_kh_u_m_i"/>
                 </FrameLayout>
                 <FrameLayout android:id="@+id/frameStacknhplaimt"
                     android:layout_gravity="center_horizontal"
@@ -144,13 +152,15 @@
                         android:orientation="vertical" style="@style/groupStylewhite_2">
 
                         <EditText
-                            android:id="@+id/txtNhplaimt"
+                            android:id="@+id/txtNhapLai"
                             style="@style/txtInterregular16_2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:ellipsize="end"
                             android:gravity="start"
                             android:hint="Nhập lại mật khẩu mới"
+                            android:textColorHint="@color/gray_700"
+
                             android:inputType="textPassword"
                             android:singleLine="true" />
                     </LinearLayout>
@@ -163,11 +173,11 @@
                         android:paddingStart="@dimen/_3pxh"
                         android:paddingTop="@dimen/_2pxv"
                         android:singleLine="true"
-                        style="@style/txtSolid" tools:text="@string/msg_xa_c_minh_m_t"/>
+                        style="@style/txtSolid" android:text="@string/msg_xa_c_minh_m_t"/>
                 </FrameLayout>
                 <androidx.appcompat.widget.AppCompatButton
                     android:ellipsize="end" android:gravity="center"
-                    android:id="@+id/btniMtKhu"
+                    android:id="@+id/btnDoiMatKhau"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="@dimen/_62pxv"
                     android:layout_marginBottom="@dimen/_20pxv"

@@ -2,17 +2,18 @@ package com.example.adminapplication.models;
 
 
 public class User {
-    private String FullName,PhoneNumber,Email,PersonalNumber,Address,Password;
-
+    private String FullName,PhoneNumber,Email,PersonalNumber,Address;
+    private int Id;
     private Boolean activate;
     private Integer Coin;
     private String BirthDay;
 
-    public User(String fullName, String phoneNumber, String email, String Password,  String personalNumber, String address, Boolean activate, Integer coin, String birthDay) {
+    public User(Integer Id,String fullName, String phoneNumber, String email,  String personalNumber
+            , String address, Boolean activate, Integer coin, String birthDay) {
+        this.Id = Id;
         FullName = fullName;
         PhoneNumber = phoneNumber;
         Email = email;
-        this.Password = Password;
         PersonalNumber = personalNumber;
         Address = address;
         this.activate = activate;
@@ -82,5 +83,13 @@ public class User {
 
     public void setBirthDay(String birthDay) {
         BirthDay = birthDay;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 }

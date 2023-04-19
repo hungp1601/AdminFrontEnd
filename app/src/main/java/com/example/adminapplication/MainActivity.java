@@ -12,6 +12,7 @@ import com.example.adminapplication.models.request.UserRequest;
 import com.example.adminapplication.models.response.BaseResponse;
 import com.example.adminapplication.presenters.UserPresenter;
 import com.example.adminapplication.views.ResponseView;
+import com.google.gson.internal.LinkedTreeMap;
 
 public class MainActivity extends AppCompatActivity implements ResponseView {
     Button btnLogin;
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements ResponseView {
         else {
             Intent intent;
             intent = new Intent(this, Home.class);
+            LinkedTreeMap<String, Double> obj = (LinkedTreeMap<String, Double>) baseResponse.getData();
+            int id = obj.get("Id").intValue();
+            intent.putExtra("id",id);
             startActivity(intent);
         }
     }

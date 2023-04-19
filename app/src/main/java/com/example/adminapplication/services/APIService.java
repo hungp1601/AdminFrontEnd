@@ -1,5 +1,6 @@
 package com.example.adminapplication.services;
 
+import com.example.adminapplication.models.request.ChangePasswordRequest;
 import com.example.adminapplication.models.request.CreateUserRequest;
 import com.example.adminapplication.models.request.UserRequest;
 import com.example.adminapplication.models.response.BaseResponse;
@@ -16,6 +17,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface APIService {
     Gson gson = new GsonBuilder()
@@ -43,5 +46,8 @@ public interface APIService {
 
     @GET("/api/v1/users")
     Call<BaseResponse> getAllUser();
+
+    @PUT("/api/v1/users/{id}/updatePassword")
+    Call<BaseResponse> changePassword(@Path("id")int id,@Body ChangePasswordRequest changePasswordRequest );
 }
 

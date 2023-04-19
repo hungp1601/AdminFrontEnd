@@ -47,7 +47,12 @@ public class Home extends AppCompatActivity {
         btnCaiDat.setOnClickListener(v -> {
             Intent intent;
             intent = new Intent(v.getContext(), CaiDat.class);
+            Intent myIntent = getIntent();
+            Integer id = myIntent.getIntExtra("id",0);
+
+            intent.putExtra("id",id);
             startActivity(intent);
+
         });
 
         btnLichSu.setOnClickListener(v -> {

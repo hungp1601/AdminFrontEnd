@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable name="listuserRowModel" type="com.hngsapplication.app.modules.framefourteen.data.model.ListuserRowModel"/>
-    </data>
+
     <LinearLayout android:id="@+id/linearRowuser"
         android:layout_height="wrap_content"
         android:layout_width="match_parent" android:orientation="horizontal">
@@ -22,22 +20,22 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.91" android:layout_width="0dp" android:orientation="vertical">
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txtPD00001113"
+                    android:id="@+id/txtSDY"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_width="wrap_content"
                     android:singleLine="true"
-                    android:text="@{listuserRowModel.txtPD00001113}"
+                    android:text="txtPD00001113"
                     style="@style/txtInterregular18" tools:text="@string/lbl_pd00001113"/>
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txt038968204"
+                    android:id="@+id/txSDT"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
                     android:layout_marginStart="@dimen/_1pxh"
                     android:layout_marginTop="@dimen/_3pxv"
                     android:layout_width="wrap_content"
                     android:singleLine="true"
-                    android:text="@{listuserRowModel.txt038968204}"
+                    android:text="txt038968204"
                     style="@style/txtInterregular14_1" tools:text="@string/lbl_038968204"/>
             </LinearLayout>
             <ImageButton android:background="@color/white_A701"

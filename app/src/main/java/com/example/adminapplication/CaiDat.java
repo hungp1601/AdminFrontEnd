@@ -22,6 +22,10 @@ public class CaiDat extends AppCompatActivity {
         btnBack.setOnClickListener(v -> {
             Intent intent;
             intent = new Intent(v.getContext(), Home.class);
+            Intent myIntent = getIntent();
+            Integer id = myIntent.getIntExtra("id",0);
+
+            intent.putExtra("id",id);
             startActivity(intent);
         });
 
