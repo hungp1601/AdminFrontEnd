@@ -1,6 +1,5 @@
 package com.example.adminapplication;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,7 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class NapTienActivity extends AppCompatActivity  implements ResponseView {
+public class ThayDoiTT extends AppCompatActivity implements ResponseView {
+
     ImageView btnBack;
     UserPresenter userPresenter;
     UserAdapter adapter;
@@ -36,7 +36,7 @@ public class NapTienActivity extends AppCompatActivity  implements ResponseView 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actitvity_nap_tien);
+        setContentView(R.layout.activity_thay_doi_tt);
 
         btnBack = findViewById(R.id.btnBack);
         recyclerListUser = findViewById(R.id.recyclerListUser);
@@ -55,7 +55,6 @@ public class NapTienActivity extends AppCompatActivity  implements ResponseView 
 
     void getUserList(){
         try {
-
             userPresenter = new UserPresenter(this);
             userPresenter.getAllUser();
         }
@@ -83,8 +82,8 @@ public class NapTienActivity extends AppCompatActivity  implements ResponseView 
 
                 List<User> filteredList = listUser.stream()
                         .filter(user -> user.getPhoneNumber().contains(searchText) ||
-                        user.getFullName().matches(".*" + searchText + ".*") ||
-                        user.getEmail().matches(".*" + searchText + ".*"))
+                                user.getFullName().matches(".*" + searchText + ".*") ||
+                                user.getEmail().matches(".*" + searchText + ".*"))
                         .collect(Collectors.toList());
 
                 recyclerListUser.setLayoutManager(new LinearLayoutManager(context));

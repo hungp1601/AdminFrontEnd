@@ -32,7 +32,7 @@ public interface APIService {
             .writeTimeout(5, TimeUnit.SECONDS) // Thiết lập timeout ghi dữ liệu
             .build();
     APIService apiService = new Retrofit.Builder()
-            .baseUrl("http:192.168.1.10:8000")
+            .baseUrl("http:192.168.97.17:8000")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(httpClient)
             .build()

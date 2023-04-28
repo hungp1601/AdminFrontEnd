@@ -63,7 +63,7 @@ public class Home extends AppCompatActivity {
 
         btnTDTTKH.setOnClickListener(v -> {
             Intent intent;
-            intent = new Intent(v.getContext(), ThayDoiThongTin.class);
+            intent = new Intent(v.getContext(), ThayDoiTT.class);
             startActivity(intent);
         });
 
