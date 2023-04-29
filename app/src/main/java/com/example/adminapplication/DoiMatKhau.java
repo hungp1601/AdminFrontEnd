@@ -1,5 +1,6 @@
 package com.example.adminapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -20,8 +21,8 @@ import com.google.gson.internal.LinkedTreeMap;
 public class DoiMatKhau extends AppCompatActivity  implements ResponseView {
     ImageView btnBack;
     AppCompatButton btnDoiMatKhau;
+    private LocalStorage localStorage;
     private UserPresenter userPresenter;
-
 
     EditText txtMKCU, txtMKMoi,txtNhapLai;
     @Override
@@ -31,9 +32,10 @@ public class DoiMatKhau extends AppCompatActivity  implements ResponseView {
 
         btnBack = findViewById(R.id.btnBack);
         btnDoiMatKhau = findViewById(R.id.btnDoiMatKhau);
-         txtMKCU = findViewById(R.id.txtMKCU);
-         txtMKMoi = findViewById(R.id.txtMKMoi);
-         txtNhapLai = findViewById(R.id.txtNhapLai);
+        txtMKCU = findViewById(R.id.txtMKCU);
+        txtMKMoi = findViewById(R.id.txtMKMoi);
+        txtNhapLai = findViewById(R.id.txtNhapLai);
+        localStorage = new LocalStorage(this);
 
 
         btnBack.setOnClickListener(v -> {
@@ -48,13 +50,11 @@ public class DoiMatKhau extends AppCompatActivity  implements ResponseView {
             String NhapLai = txtNhapLai.getText().toString();
             if(MKMoi.equals(NhapLai)){
                 try {
-                    Intent myIntent = getIntent();
-                    Integer id = myIntent.getIntExtra("id",1);
+                    Integer id = localStorage.getInt("user_id",0);
 
                     ChangePasswordRequest changePasswordRequest = new ChangePasswordRequest(MKCu,MKMoi);
 
                     userPresenter = new UserPresenter(this);
-
                     userPresenter.changePassword(id,changePasswordRequest);
 
                 }
@@ -70,7 +70,7 @@ public class DoiMatKhau extends AppCompatActivity  implements ResponseView {
     }
 
     @Override
-    public void onComplete(BaseResponse baseResponse) {
+    public void onComplete(@NonNull BaseResponse baseResponse) {
         Toast.makeText(this, baseResponse.getMessage(),Toast.LENGTH_LONG).show();
     }
 

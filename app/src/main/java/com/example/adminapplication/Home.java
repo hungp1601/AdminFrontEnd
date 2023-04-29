@@ -14,9 +14,9 @@ import android.widget.Toast;
 
 public class Home extends AppCompatActivity {
     ImageView btnLogout;
+    private LocalStorage localStorage;
 
     ImageButton btnNapTien, btnMoTK, btnCaiDat, btnLichSu, btnTDTTKH, btnTKDT;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,12 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         btnLogout = findViewById(R.id.btnLogout);
-
-        // Find references to each ImageButton by their respective IDs
         btnNapTien = findViewById(R.id.btnNapTien);
         btnMoTK = findViewById(R.id.btnMoTK);
         btnCaiDat = findViewById(R.id.btnCaiDat);
         btnLichSu = findViewById(R.id.btnLichSu);
         btnTDTTKH = findViewById(R.id.btnTDTTKH);
+        localStorage = new LocalStorage(this);
 
         btnNapTien.setOnClickListener(v -> {
             Intent intent;
@@ -47,12 +46,7 @@ public class Home extends AppCompatActivity {
         btnCaiDat.setOnClickListener(v -> {
             Intent intent;
             intent = new Intent(v.getContext(), CaiDat.class);
-            Intent myIntent = getIntent();
-            Integer id = myIntent.getIntExtra("id",0);
-
-            intent.putExtra("id",id);
             startActivity(intent);
-
         });
 
         btnLichSu.setOnClickListener(v -> {
@@ -67,7 +61,6 @@ public class Home extends AppCompatActivity {
             startActivity(intent);
         });
 
-
         btnLogout.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -78,12 +71,17 @@ public class Home extends AppCompatActivity {
                 Intent intent;
                 intent = new Intent(v.getContext(), MainActivity.class);
                 startActivity(intent);
+                localStorage.remove("user_id");
+
                 Toast.makeText(getApplicationContext(), "You have been logged out.", Toast.LENGTH_SHORT).show();
             });
             builder.setNegativeButton("No", null);
-
             AlertDialog dialog = builder.create();
             dialog.show();
         });
+    }
+    @Override
+    public void onBackPressed() {
+        // Disable the back button by not calling super.onBackPressed()
     }
 }

@@ -89,7 +89,7 @@ public class NapTienActivity extends AppCompatActivity  implements ResponseView 
 
                 recyclerListUser.setLayoutManager(new LinearLayoutManager(context));
 
-                adapter = new UserAdapter(context, filteredList);
+                adapter = new UserAdapter(context, filteredList, (UserAdapter.OnItemClickListener) context);
                 recyclerListUser.setAdapter(adapter);
             }
         });
@@ -125,7 +125,7 @@ public class NapTienActivity extends AppCompatActivity  implements ResponseView 
                 }
                 recyclerListUser.setLayoutManager(new LinearLayoutManager(this));
 
-                adapter = new UserAdapter(this, listUser);
+                adapter = new UserAdapter(this, listUser, (UserAdapter.OnItemClickListener) this);
                 recyclerListUser.setAdapter(adapter);
             }
         }

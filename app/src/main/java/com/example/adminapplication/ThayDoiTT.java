@@ -23,7 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ThayDoiTT extends AppCompatActivity implements ResponseView {
+public class ThayDoiTT extends AppCompatActivity
+        implements ResponseView, UserAdapter.OnItemClickListener {
 
     ImageView btnBack;
     UserPresenter userPresenter;
@@ -50,7 +51,7 @@ public class ThayDoiTT extends AppCompatActivity implements ResponseView {
         });
 
         getUserList();
-        searchUserList(this);
+        searchUserList(this, this);
     }
 
     void getUserList(){
@@ -63,7 +64,7 @@ public class ThayDoiTT extends AppCompatActivity implements ResponseView {
         }
     }
 
-    void searchUserList(Context context){
+    void searchUserList(Context context, UserAdapter.OnItemClickListener clickListener){
         txtTimKiem.addTextChangedListener(new TextWatcher() {
 
             @Override
@@ -88,7 +89,7 @@ public class ThayDoiTT extends AppCompatActivity implements ResponseView {
 
                 recyclerListUser.setLayoutManager(new LinearLayoutManager(context));
 
-                adapter = new UserAdapter(context, filteredList);
+                adapter = new UserAdapter(context, filteredList, (UserAdapter.OnItemClickListener) clickListener);
                 recyclerListUser.setAdapter(adapter);
             }
         });
@@ -124,7 +125,7 @@ public class ThayDoiTT extends AppCompatActivity implements ResponseView {
                 }
                 recyclerListUser.setLayoutManager(new LinearLayoutManager(this));
 
-                adapter = new UserAdapter(this, listUser);
+                adapter = new UserAdapter(this, listUser,this);
                 recyclerListUser.setAdapter(adapter);
             }
         }
@@ -133,5 +134,14 @@ public class ThayDoiTT extends AppCompatActivity implements ResponseView {
     @Override
     public void onError(String message) {
         Toast.makeText(this, message,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onItemClick(User user) {
+        Intent intent;
+        intent = new Intent(this, ThayDoiThongTin.class);
+        intent.putExtra(
+                "clicked_user",user.getId());
+        startActivity(intent);
     }
 }
