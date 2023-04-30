@@ -1,6 +1,7 @@
 package com.example.adminapplication.services;
 
 import com.example.adminapplication.models.request.ChangePasswordRequest;
+import com.example.adminapplication.models.request.ChangeUserRequest;
 import com.example.adminapplication.models.request.CreateUserRequest;
 import com.example.adminapplication.models.request.UserRequest;
 import com.example.adminapplication.models.response.BaseResponse;
@@ -27,9 +28,9 @@ public interface APIService {
 
     MediaType mediaType = MediaType.parse("application/json");
     OkHttpClient httpClient = new OkHttpClient.Builder()
-            .connectTimeout(5, TimeUnit.SECONDS) // Thiết lập timeout kết nối
-            .readTimeout(5, TimeUnit.SECONDS) // Thiết lập timeout đọc dữ liệu
-            .writeTimeout(5, TimeUnit.SECONDS) // Thiết lập timeout ghi dữ liệu
+            .connectTimeout(60, TimeUnit.SECONDS) // Thiết lập timeout kết nối
+            .readTimeout(60, TimeUnit.SECONDS) // Thiết lập timeout đọc dữ liệu
+            .writeTimeout(60, TimeUnit.SECONDS) // Thiết lập timeout ghi dữ liệu
             .build();
     APIService apiService = new Retrofit.Builder()
             .baseUrl("http:192.168.0.110:8000")
@@ -49,5 +50,11 @@ public interface APIService {
 
     @PUT("/api/v1/users/{id}/updatePassword")
     Call<BaseResponse> changePassword(@Path("id")int id,@Body ChangePasswordRequest changePasswordRequest );
+
+    @GET("/api/v1/users/{id}")
+    Call<BaseResponse> getUser(@Path("id")int id);
+
+    @PUT("/api/v1/users/{id}")
+    Call<BaseResponse> updateUser(@Path("id")int id,@Body ChangeUserRequest changeUserRequest );
 }
 

@@ -166,4 +166,9 @@
     <string name="lbl_0389682304">0389682304</string>
     <string name="msg_nap_tien_vao_ta">Nap tien vao tai khoan</string>
     <string name="lbl_gd0001">GD0001</string>
+
+    <string-array name="active_array">
+        <item>Active</item>
+        <item>Inactive</item>
+    </string-array>
 </resources>

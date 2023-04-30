@@ -1,7 +1,9 @@
 package com.example.adminapplication.models;
 
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String FullName,PhoneNumber,Email,PersonalNumber,Address;
     private int Id;
     private Boolean activate;

@@ -1,6 +1,7 @@
 package com.example.adminapplication.presenters;
 
 import com.example.adminapplication.models.request.ChangePasswordRequest;
+import com.example.adminapplication.models.request.ChangeUserRequest;
 import com.example.adminapplication.models.request.CreateUserRequest;
 import com.example.adminapplication.models.request.UserRequest;
 import com.example.adminapplication.models.response.BaseResponse;
@@ -80,6 +81,44 @@ public class UserPresenter implements IUserPresenter {
     @Override
     public void changePassword(int id, ChangePasswordRequest changePasswordRequest) {
         APIService.apiService.changePassword(id,changePasswordRequest).enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                if(response.body() != null){
+                    responseView.onComplete(response.body());
+                }else{
+                    responseView.onError("null");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+                responseView.onError(t.getMessage());
+            }
+        });
+    }
+
+    @Override
+    public void getUser(int id) {
+        APIService.apiService.getUser(id).enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                if(response.body() != null){
+                    responseView.onComplete(response.body());
+                }else{
+                    responseView.onError("null");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+                responseView.onError(t.getMessage());
+            }
+        });
+    }
+
+    @Override
+    public void updateUser(int id, ChangeUserRequest changeUserRequest) {
+        APIService.apiService.updateUser(id,changeUserRequest).enqueue(new Callback<BaseResponse>() {
             @Override
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
                 if(response.body() != null){

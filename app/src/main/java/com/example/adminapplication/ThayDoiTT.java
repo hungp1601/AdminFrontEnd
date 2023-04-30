@@ -19,6 +19,7 @@ import com.example.adminapplication.presenters.UserPresenter;
 import com.example.adminapplication.views.ResponseView;
 import com.google.gson.internal.LinkedTreeMap;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -140,8 +141,7 @@ public class ThayDoiTT extends AppCompatActivity
     public void onItemClick(User user) {
         Intent intent;
         intent = new Intent(this, ThayDoiThongTin.class);
-        intent.putExtra(
-                "clicked_user",user.getId());
+        intent.putExtra("clicked_user", user);
         startActivity(intent);
     }
 }
