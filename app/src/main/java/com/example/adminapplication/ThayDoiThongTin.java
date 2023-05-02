@@ -39,13 +39,13 @@ import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
-public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, PlateAdapter.OnItemClickListener  {
+public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, PlateAdapter.OnItemClickListener {
 
     private static final int GALLERY_REQUEST_CODE = 1;
     private final int REQUEST_CODE_PERMISSIONS = 10;
     private final String[] REQUIRED_PERMISSIONS =
             new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"
-                    ,"android.permission.READ_EXTERNAL_STORAGE"};
+                    , "android.permission.READ_EXTERNAL_STORAGE"};
 
     TextView txtMaTK, txtSoDu, txtTen, txtCCCD;
     EditText txtDiaChi, txtSDT;
@@ -59,6 +59,7 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
 
     User user;
     AppCompatButton btnThemXe;
+    Car currentCar;
 
     int id;
     String imagePath;
@@ -113,9 +114,9 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
         }
     }
 
-    private boolean allPermissionsGranted(){
-        for(String permission : REQUIRED_PERMISSIONS){
-            if(ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED){
+    private boolean allPermissionsGranted() {
+        for (String permission : REQUIRED_PERMISSIONS) {
+            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
                 return false;
             }
         }
@@ -191,7 +192,7 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
         txtStatus.setEnabled(status);
     }
 
-    private void requestPermission(){
+    private void requestPermission() {
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS);
         }
@@ -201,7 +202,7 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == GALLERY_REQUEST_CODE && resultCode == RESULT_OK && data != null && data.getData() != null) {
+        if (resultCode == RESULT_OK && data != null && data.getData() != null) {
             Uri imageUri = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
@@ -214,7 +215,13 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
                 MultipartBody.Part imagePart = MultipartBody.Part.createFormData("image", "plate.jpg", requestBody);
 
                 userPresenter = new UserPresenter(this);
-                userPresenter.registerPlate(user.getId(), imagePart);
+
+                if (requestCode == GALLERY_REQUEST_CODE) {
+                    userPresenter.registerPlate(user.getId(), imagePart);
+
+                } else if (requestCode == 2) {
+                    userPresenter.updatePlate(currentCar.getId(), imagePart);
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -238,13 +245,13 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
             Toast.makeText(this, account.getMessage(), Toast.LENGTH_LONG).show();
         } else {
             switch (type) {
-                case "getPlates":
-                {
+                case "getPlates": {
                     LinkedTreeMap<String, Object> t = (LinkedTreeMap<String, Object>) account.getData();
                     List<LinkedTreeMap<String, Object>> items = (List<LinkedTreeMap<String, Object>>) t.get("items");
 
                     if (items != null) {
-                        for(LinkedTreeMap<String, Object> obj:items) {
+                        listCar = new ArrayList<>();
+                        for (LinkedTreeMap<String, Object> obj : items) {
                             Car car = new Car(
                                 Double.valueOf(String.valueOf(obj.get("Id"))).intValue(),
                                 Double.valueOf(String.valueOf(obj.get("UserId"))).intValue(),
@@ -256,13 +263,11 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
                         }
                         recyclerListCar.setLayoutManager(new LinearLayoutManager(this));
 
-                        adapter = new PlateAdapter(this, listCar,this);
+                        adapter = new PlateAdapter(this, listCar, this);
                         recyclerListCar.setAdapter(adapter);
                     }
                     break;
                 }
-                case "anotherExample":
-                    break;
                 default:
                     break;
             }
@@ -281,6 +286,8 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
 
     @Override
     public void onItemClick(Car car) {
-
+        currentCar = car;
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, 2);
     }
 }

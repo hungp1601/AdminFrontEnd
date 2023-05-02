@@ -72,5 +72,9 @@ public interface APIService {
 
     @GET("/api/v1/plates")
     Call<BaseResponse> getPlates(@Query("user_id")int userId);
+
+    @Multipart
+    @PUT("/api/v1/plates/{id}")
+    Call<BaseResponse> updatePlate(@Path("id")int id,@Part MultipartBody.Part image);
 }
 

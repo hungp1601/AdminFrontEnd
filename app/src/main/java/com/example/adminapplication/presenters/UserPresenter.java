@@ -193,4 +193,23 @@ public class UserPresenter implements IUserPresenter  {
             }
         });
     }
+
+    @Override
+    public void updatePlate(int id, MultipartBody.Part image) {
+        APIService.apiService.updatePlate(id, image).enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                if(response.body() != null){
+                    responseView.onComplete(response.body());
+                }else{
+                    responseView.onError("null");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+                responseView.onError(t.getMessage());
+            }
+        });
+    }
 }

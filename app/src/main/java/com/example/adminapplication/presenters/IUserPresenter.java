@@ -23,4 +23,7 @@ public interface IUserPresenter {
     void registerPlate(int id, MultipartBody.Part image);
 
     void getPlates(int id);
+
+    void updatePlate(int id, MultipartBody.Part image);
+
 }
