@@ -73,17 +73,6 @@
                     android:layout_width="match_parent"
                     itemSpace="@{@dimen/_36pxh}"
                     android:layout_height="wrap_content" />
-                <!--                <androidx.recyclerview.widget.RecyclerView-->
-                <!--                    android:gravity="center_horizontal"-->
-                <!--                    android:id="@+id/recyclerListUser"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginEnd="@dimen/_10pxh"-->
-                <!--                    android:layout_marginStart="@dimen/_10pxh"-->
-                <!--                    android:layout_marginTop="@dimen/_40pxv"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:orientation="vertical"-->
-
-                <!--                    itemSpace="@{@dimen/_36pxh}" tools:itemCount="20" tools:listitem="@layout/row_listuser"/>-->
                 <View android:background="@color/gray_700"
                     android:id="@+id/lineLineTwo"
                     android:layout_gravity="center_horizontal"

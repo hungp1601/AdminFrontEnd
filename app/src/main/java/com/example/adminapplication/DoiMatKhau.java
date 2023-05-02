@@ -75,6 +75,11 @@ public class DoiMatKhau extends AppCompatActivity  implements ResponseView {
     }
 
     @Override
+    public void onComplete(BaseResponse account, String type) {
+
+    }
+
+    @Override
     public void onError(String message) {
         Toast.makeText(this, message,Toast.LENGTH_LONG).show();
     }

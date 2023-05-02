@@ -344,7 +344,7 @@
                 </LinearLayout>
                 <LinearLayout android:gravity="center_horizontal"
                     android:id="@+id/linearColumncar"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/_19pxh"
                     android:layout_marginStart="@dimen/_21pxh"
                     android:layout_marginTop="@dimen/_10pxv"
@@ -361,9 +361,8 @@
                         android:layout_marginEnd="@dimen/_24pxh"
                         android:gravity="center_horizontal"
                         android:orientation="vertical"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:itemCount="2"
-                        tools:listitem="@layout/row_listcar" />
+                        android:maxHeight="100dp"
+                        />
 
                     <View android:background="@color/gray_700"
                         android:id="@+id/lineLineThree"
@@ -385,9 +384,10 @@
                     android:layout_width="match_parent" android:orientation="horizontal">
                     <androidx.appcompat.widget.AppCompatButton
                         android:ellipsize="end" android:gravity="center"
-                        android:id="@+id/btnThmXe"
+                        android:id="@+id/btnThemXe"
                         android:layout_height="@dimen/_43pxv"
                         android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_marginLeft="@dimen/_120pxv"
                         android:layout_width="@dimen/_122pxh"
                         android:paddingBottom="@dimen/_11pxv"
                         android:paddingTop="@dimen/_11pxv"
@@ -395,21 +395,6 @@
                         android:text="@string/lbl_th_m_xe"
                         android:textAllCaps="false"
                         style="@style/btnSolidRounded_1" tools:text="@string/lbl_th_m_xe"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnCpNht"
-                        style="@style/btnSolidRounded_1"
-                        android:layout_width="@dimen/_122pxh"
-                        android:layout_height="@dimen/_43pxv"
-                        android:layout_marginStart="@dimen/_100pxh"
-                        android:layout_marginTop="@dimen/_1pxv"
-                        android:ellipsize="end"
-
-                        android:gravity="center"
-                        android:singleLine="true"
-                        android:text="@string/lbl_c_p_nh_t"
-                        android:textAllCaps="false"
-                        tools:text="@string/lbl_c_p_nh_t" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

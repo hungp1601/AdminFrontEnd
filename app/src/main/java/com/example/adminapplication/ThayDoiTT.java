@@ -133,6 +133,11 @@ public class ThayDoiTT extends AppCompatActivity
     }
 
     @Override
+    public void onComplete(BaseResponse account, String type) {
+
+    }
+
+    @Override
     public void onError(String message) {
         Toast.makeText(this, message,Toast.LENGTH_LONG).show();
     }

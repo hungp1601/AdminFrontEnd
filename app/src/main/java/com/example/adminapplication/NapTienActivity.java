@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class NapTienActivity extends AppCompatActivity  implements ResponseView {
+public class NapTienActivity extends AppCompatActivity  implements ResponseView, UserAdapter.OnItemClickListener {
     ImageView btnBack;
     UserPresenter userPresenter;
     UserAdapter adapter;
@@ -132,7 +132,20 @@ public class NapTienActivity extends AppCompatActivity  implements ResponseView 
     }
 
     @Override
+    public void onComplete(BaseResponse account, String type) {
+
+    }
+
+    @Override
     public void onError(String message) {
         Toast.makeText(this, message,Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onItemClick(User user) {
+        Intent intent;
+        intent = new Intent(this, NapTienUser.class);
+        intent.putExtra("clicked_user", user);
+        startActivity(intent);
     }
 }

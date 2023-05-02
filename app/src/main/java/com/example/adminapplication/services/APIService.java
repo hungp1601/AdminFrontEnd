@@ -1,8 +1,10 @@
 package com.example.adminapplication.services;
 
+import com.example.adminapplication.models.request.AddMoneyRequest;
 import com.example.adminapplication.models.request.ChangePasswordRequest;
 import com.example.adminapplication.models.request.ChangeUserRequest;
 import com.example.adminapplication.models.request.CreateUserRequest;
+import com.example.adminapplication.models.request.RegisterPlateRequest;
 import com.example.adminapplication.models.request.UserRequest;
 import com.example.adminapplication.models.response.BaseResponse;
 import com.google.gson.Gson;
@@ -11,15 +13,19 @@ import com.google.gson.GsonBuilder;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Part;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface APIService {
     Gson gson = new GsonBuilder()
@@ -33,7 +39,7 @@ public interface APIService {
             .writeTimeout(60, TimeUnit.SECONDS) // Thiết lập timeout ghi dữ liệu
             .build();
     APIService apiService = new Retrofit.Builder()
-            .baseUrl("http:192.168.0.110:8000")
+            .baseUrl("http:192.168.1.100:8000")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(httpClient)
             .build()
@@ -56,5 +62,15 @@ public interface APIService {
 
     @PUT("/api/v1/users/{id}")
     Call<BaseResponse> updateUser(@Path("id")int id,@Body ChangeUserRequest changeUserRequest );
+
+    @PUT("/api/v1/users/{id}/addMoney")
+    Call<BaseResponse> addMoney(@Path("id")int id,@Body AddMoneyRequest addMoneyRequest);
+
+    @Multipart
+    @POST("/api/v1/plates/{id}")
+    Call<BaseResponse> registerPlate(@Path("id")int id,@Part MultipartBody.Part image);
+
+    @GET("/api/v1/plates")
+    Call<BaseResponse> getPlates(@Query("user_id")int userId);
 }
 
