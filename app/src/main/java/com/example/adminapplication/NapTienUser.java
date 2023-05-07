@@ -66,7 +66,7 @@ public class NapTienUser extends AppCompatActivity implements ResponseView {
         Intent intent = getIntent();
         user = (User) intent.getSerializableExtra("clicked_user");
 
-        txtSodu.setText(user.getCoin().toString() + " đ");
+        txtSodu.setText(user.getCoin().toString());
         txtMaTK.setText(user.getEmail());
     }
 
@@ -102,7 +102,6 @@ public class NapTienUser extends AppCompatActivity implements ResponseView {
                     new AddMoneyRequest(tienNap);
             userPresenter = new UserPresenter(this);
             userPresenter.addMoney(user.getId(), addMoneyRequest);
-            txtTienNap.setText("");
         });
 
 
@@ -115,7 +114,7 @@ public class NapTienUser extends AppCompatActivity implements ResponseView {
         } else {
             int tienNap = Integer.parseInt(txtTienNap.getText().toString()) + user.getCoin();
 
-            txtSodu.setText(tienNap + " đ");
+            txtSodu.setText(String.valueOf(tienNap));
             user.setCoin(tienNap);
             Toast.makeText(this,"Add money successfully", Toast.LENGTH_LONG).show();
 
