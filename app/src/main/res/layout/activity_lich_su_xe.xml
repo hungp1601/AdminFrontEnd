@@ -85,34 +85,6 @@
                         android:layout_marginTop="@dimen/_10pxv"
                         android:layout_width="match_parent"
                         android:orientation="vertical" style="@style/groupStylebluegray_2">
-                        <LinearLayout android:gravity="start"
-                            android:id="@+id/linearRowbinsxe"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/_16pxh"
-                            android:layout_marginStart="@dimen/_16pxh"
-                            android:layout_marginTop="@dimen/_10pxv"
-                            android:layout_width="match_parent" android:orientation="horizontal">
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtBinsxe"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="@dimen/_3pxv"
-                                android:layout_weight="0.3"
-                                android:layout_width="0dp"
-                                android:singleLine="true"
-                                style="@style/txtIntermedium18" android:text="@string/lbl_bi_n_s_xe"/>
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtGroupFifteen"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_20pxh"
-                                android:layout_marginTop="@dimen/_1pxv"
-                                android:layout_weight="0.7"
-                                android:layout_width="0dp"
-                                android:paddingBottom="@dimen/_1pxv"
-                                android:paddingStart="@dimen/_27pxh"
-                                android:paddingTop="@dimen/_3pxv"
-                                android:singleLine="true"
-                                style="@style/txtSolidRounded_1" android:text="@string/lbl_30e_330_60t"/>
-                        </LinearLayout>
                         <LinearLayout android:id="@+id/linearRowtngay"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="@dimen/_16pxh"
@@ -128,11 +100,12 @@
                                 android:layout_width="0dp"
                                 android:singleLine="true"
                                 style="@style/txtIntermedium18" android:text="@string/lbl_t_nga_y"/>
-                            <View
+                            <EditText
                                 android:background="@drawable/rectangle_bg_white_a701_radius_5"
-                                android:id="@+id/viewRectangleFortyFive"
+                                android:id="@+id/txtStartDate"
                                 android:layout_height="@dimen/_25pxv"
-                                android:layout_marginStart="@dimen/_39pxh" android:layout_width="@dimen/_206pxh"/>
+                                android:layout_marginStart="@dimen/_39pxh"
+                                android:layout_width="@dimen/_206pxh"/>
                         </LinearLayout>
                         <LinearLayout android:id="@+id/linearRownngay"
                             android:layout_height="wrap_content"
@@ -149,9 +122,9 @@
                                 android:layout_width="0dp"
                                 android:singleLine="true"
                                 style="@style/txtIntermedium18" android:text="@string/lbl_n_nga_y"/>
-                            <View
+                            <EditText
                                 android:background="@drawable/rectangle_bg_white_a701_radius_5"
-                                android:id="@+id/viewRectangleFortySix"
+                                android:id="@+id/txtEndDate"
                                 android:layout_height="@dimen/_25pxv"
                                 android:layout_marginBottom="@dimen/_1pxv"
                                 android:layout_marginStart="@dimen/_24pxh" android:layout_width="@dimen/_206pxh"/>
@@ -191,17 +164,16 @@
                     android:text="@string/msg_k_t_qua_tra_c"
                     android:textAllCaps="false"
                     style="@style/btnSolidRoundedTopCorner" tools:text="@string/msg_k_t_qua_tra_c"/>
+
                 <androidx.recyclerview.widget.RecyclerView
-                    android:gravity="end"
-                    android:id="@+id/recyclerTable"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_458pxv"
-                    android:layout_marginStart="@dimen/_10pxh"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:id="@+id/recyclerGateHistory"
+                    style="@style/groupStylewhite_5"
                     itemSpace="@{@dimen/_1pxh}"
-                    style="@style/groupStylewhite_5" tools:itemCount="2" tools:listitem="@layout/row_table2"/>
+                    android:layout_width="397dp"
+                    android:layout_height="365dp"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginBottom="@dimen/_458pxv"
+                    android:gravity="end" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

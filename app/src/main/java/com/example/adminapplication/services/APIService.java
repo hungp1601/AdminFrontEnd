@@ -39,7 +39,7 @@ public interface APIService {
             .writeTimeout(60, TimeUnit.SECONDS) // Thiết lập timeout ghi dữ liệu
             .build();
     APIService apiService = new Retrofit.Builder()
-            .baseUrl("http:192.168.1.100:8000")
+            .baseUrl("http:192.168.1.102:8000")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(httpClient)
             .build()
@@ -76,5 +76,8 @@ public interface APIService {
     @Multipart
     @PUT("/api/v1/plates/{id}")
     Call<BaseResponse> updatePlate(@Path("id")int id,@Part MultipartBody.Part image);
+
+    @GET("/api/v1/gate_histories/all/")
+    Call<BaseResponse> getAllGateHistory();
 }
 

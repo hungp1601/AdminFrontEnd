@@ -1,5 +1,6 @@
 package com.example.adminapplication;
 
+import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -44,8 +45,8 @@ public class ThayDoiThongTin extends AppCompatActivity implements ResponseView, 
     private static final int GALLERY_REQUEST_CODE = 1;
     private final int REQUEST_CODE_PERMISSIONS = 10;
     private final String[] REQUIRED_PERMISSIONS =
-            new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"
-                    , "android.permission.READ_EXTERNAL_STORAGE"};
+            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    , Manifest.permission.READ_EXTERNAL_STORAGE};
 
     TextView txtMaTK, txtSoDu, txtTen, txtCCCD;
     EditText txtDiaChi, txtSDT;
